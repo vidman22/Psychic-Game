@@ -39,7 +39,7 @@ var losses = 0;
   	
 
     	  if (userGuess === computerGuess) {
-      		hangman(), wins++;
+      		psychic(), wins++;
       		return; 
       		} else  if (userGuess !== computerGuess) {
           guesses--;
@@ -47,7 +47,7 @@ var losses = 0;
     	 
 
    		   if (guesses === 0) {
-      		hangman(), losses++;
+      		psychic(), losses++;
       		return;
 
     	  	}

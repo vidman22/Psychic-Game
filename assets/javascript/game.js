@@ -3,21 +3,22 @@ var alpha = ["a", "b", "c", "d", "e", "f",
  	"u", "v", "w", "x", "y", "z"];
 
  	
-    var lettersGuessed = [];
-    var wins = 0;
-    var losses = 0;
-    var guesses = 10;
-
-
     
- 	//var computerGuess = alpha[Math.floor(Math.random() * alpha.length)];
- 		//console.log(computerGuess);
+var wins = 0;
+var losses = 0;
+    
 
 
- 	function hangman() {
 
+ 	function psychic() {
+
+  var guesses = 10;
+  var lettersGuessed = [];
  	var computerGuess = alpha[Math.floor(Math.random() * alpha.length)];
  		console.log(computerGuess);
+
+   
+
 
  	
  	document.onkeyup = function(event) {
@@ -25,42 +26,36 @@ var alpha = ["a", "b", "c", "d", "e", "f",
      
     	lettersGuessed.push(event.key)
 
-
     	var userGuess = event.key;
-  
-  	
 
-    	  if (userGuess === computerGuess) {
-      		wins++, lettersGuessed = [], guesses = 10, hangman();
-      		return; 
-      		}
-
-    	  if (userGuess !== computerGuess) {
-      		guesses--;
-     	 	}
-
-   		   if (guesses === 0) {
-      		losses++, lettersGuessed = [], guesses = 10, hangman();
-      		return;
-
-    	  	}
-var html =
-      "<p>The computer chose: " + "?" + "</p>" +
+     var html =
+      "<p>Guess what letter I'm thinking of</p>" +
           "<p>You chose: " + userGuess + "</p>" +
           "<p>letters guessed: " + lettersGuessed + "</p>" + 
           "<p>wins: " + wins + "</p>" +
           "<p>losses: " + losses + "</p>" +
           "<p>guesses: " + guesses + "</p>" ;
+        document.querySelector("#game").innerHTML = html; 
+  	
 
+    	  if (userGuess === computerGuess) {
+      		hangman(), wins++;
+      		return; 
+      		} else  if (userGuess !== computerGuess) {
+          guesses--;
+        }
+    	 
 
-        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
-        
+   		   if (guesses === 0) {
+      		hangman(), losses++;
+      		return;
 
-        // Set the inner HTML contents of the #game div to our html string
-        document.querySelector("#game").innerHTML = html;
+    	  	}
+
+         
 
        }
    }
       	
 
-hangman();
+psychic();

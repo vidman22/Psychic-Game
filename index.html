@@ -3,18 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hangman Game</title>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
 
-
-<body>
-	<h1>The Psychic Game!</h1>
-	<div id="game"> 
-   <p>Press a letter to start playing!</p> 
-  </div> 
-
+<style>
+ body {
+    text-align: center;
   
+    color: white;
+ }
+
+#game {
+  color: black;
+}
+
+ .jumbotron-fluid {
+    background-image: url("assets/images/psychic_ball.jpg");
+    background-position: center;
+ }
+</style>
+
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">The Psychic Game!</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<div id="game"><p>Press a letter to start playing!</p>
+  </div>
 
 
 

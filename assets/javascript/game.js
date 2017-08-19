@@ -6,9 +6,6 @@ var alpha = ["a", "b", "c", "d", "e", "f",
     
 var wins = 0;
 var losses = 0;
-    
-
-
 
  	function psychic() {
 
@@ -40,7 +37,7 @@ var losses = 0;
 
     	  if (userGuess === computerGuess) {
       		psychic(), wins++;
-      		return; 
+      		; 
       		} else  if (userGuess !== computerGuess) {
           guesses--;
         }
@@ -48,7 +45,7 @@ var losses = 0;
 
    		   if (guesses === 0) {
       		psychic(), losses++;
-      		return;
+      		;
 
     	  	}
 

@@ -1,13 +1,15 @@
+// Array of alphabet
 var alpha = ["a", "b", "c", "d", "e", "f",
 	"g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
  	"u", "v", "w", "x", "y", "z"];
 
  	
-    
+// global score variables
 var wins = 0;
 var losses = 0;
 
- 	function psychic() {
+// game function
+function psychic() {
 
   var guesses = 10;
   var lettersGuessed = [];
@@ -37,12 +39,12 @@ var losses = 0;
 
     	  if (userGuess === computerGuess) {
       		psychic(), wins++;
-      		; 
+      		;
       		} else  if (userGuess !== computerGuess) {
           guesses--;
         }
     	 
-
+        // Resets the game if guesses run out
    		   if (guesses === 0) {
       		psychic(), losses++;
       		;
